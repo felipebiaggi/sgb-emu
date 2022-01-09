@@ -1,10 +1,11 @@
-#include <iostream>
-#include <memory>
 #include "bus.h"
+#include "load_file.h"
 
-int main()
+
+int main(int argc, char *argv[])
 {
-   Bus barramento = Bus();
 
    return 0;
 }
+
+
