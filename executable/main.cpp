@@ -5,6 +5,8 @@
 int main(int argc, char *argv[])
 {
 
+   load_game_file(argc, argv);
+
    return 0;
 }
 
