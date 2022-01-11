@@ -60,7 +60,7 @@ vector<uint8_t> load_game_file(int argc, char *argv[]){
         int count = 0;
         stringstream c_string;
 
-        if(debug == "--showHex"){
+        if(debug == "--debug"){
             while(!s_file.eof()){
                 int value = s_file.get();
                 
