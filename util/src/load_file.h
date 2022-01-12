@@ -1,6 +1,7 @@
 #ifndef LOAD_FILE_H
 #define LOAD_FILE_H
 #include <filesystem>
+#include <string>
 #include <cstdint>
 #include <exception>
 #include <iostream>
