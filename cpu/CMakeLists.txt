@@ -7,5 +7,6 @@ add_library(
     )
 
 
+target_link_libraries(cpu PRIVATE cartridge)
 target_link_libraries(cpu PRIVATE bus)
 target_include_directories(cpu PUBLIC "src")

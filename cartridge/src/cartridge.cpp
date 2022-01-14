@@ -17,10 +17,14 @@ Cartridge::Cartridge(vector<uint8_t> value){
     // Hexadecimal -> 0x013F~0x0142
     // Decimal     -> 319~322
     manufacturer_code = {&value[319], &value[322]};
-    
+
     cgb_flag = { value.at(323) };
 
-    licensee_code = {&value[324], &value[325]};
+    // Converts the value of addresses 324 and 325 to ASCII characters and concatenate them
+    string s_lic;
+    s_lic+=value.at(324);
+    s_lic+=value.at(325);
+    licensee_code = { s_lic };
 
     sgb_flag = { value.at(326) };
 
@@ -40,8 +44,9 @@ Cartridge::Cartridge(vector<uint8_t> value){
 
     global_checksum = { &value[334], &value[335] };
 
-    show_cartridge_info();
+    //show_cartridge_info();
 };
+
 
 Cartridge::~Cartridge(){
     

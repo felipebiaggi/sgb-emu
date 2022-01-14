@@ -1,13 +1,16 @@
 #include <iostream>
+#include <vector>
 #include <stdio.h>
 #include <string.h>
 #include "bus.h"
+#include "cartridge.h"
 
-Bus::Bus()
+Bus::Bus(Cartridge cartridge)
 {
     for (auto& i : ram) i = 0x00;
     cpu.ConnectBus(this);
     std::cout << "RAM: " << ram.size() << std::endl;
+    std::cout << "Cartridge Size: " << cartridge.game_data.size() << std::endl;
 }
 
 void Bus::write(uint16_t addr, uint8_t data) {

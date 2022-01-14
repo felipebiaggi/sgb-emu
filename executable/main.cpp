@@ -1,19 +1,18 @@
 #include <vector>
 #include <cstdint>
-#include "bus.h"
 #include "cartridge.h"
+#include "bus.h"
 #include "load_file.h"
 
 
 int main(int argc, char *argv[])
 {
 
-   vector<uint8_t> game_data = load_game_file(argc, argv);
+   auto game_data = load_game_file(argc, argv);
 
-   auto cartridge = new Cartridge(game_data);
+   auto cartridge = Cartridge(game_data);
 
-
-   delete cartridge;
+   auto bus = Bus(cartridge);
 
    return 0;
 }

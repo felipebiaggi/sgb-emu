@@ -1,12 +1,14 @@
 #ifndef BUS_H
 #define BUS_H
+#include <vector>
 #include <cstdint>
 #include <array>
 #include "lr35902.h"
+#include "cartridge.h"
 
 class Bus {
 public:
-    Bus();
+    Bus(Cartridge cartridge);
 
 public:
     std::array<uint8_t, 64 * 1024> ram;

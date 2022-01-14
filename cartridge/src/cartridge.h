@@ -5,6 +5,8 @@
 #include <cstdint>
 #include <vector>
 #include <string>
+#include <iomanip>
+
 
 using namespace std;
 
@@ -15,14 +17,13 @@ public:
     ~Cartridge();
 
 public:
-    
+    vector<uint8_t> game_data {};
 
 private:
-    vector<uint8_t> game_data {};
     string game_title {};
     string manufacturer_code {};
     uint8_t cgb_flag {};
-    string licensee_code {};
+    string licensee_code;
     uint8_t sgb_flag {};
     uint8_t cartridge_type {};
     uint8_t rom_size {};
